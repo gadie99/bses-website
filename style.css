@@ -1,163 +1,140 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
-body{
-    font-family: montserrat;
 
+body {
+    font-family: 'Montserrat', sans-serif;
 }
-nav{
+
+nav {
     background: darkcyan;
     height: 82px;
     width: 100%;
-    
 }
-img{ /*logo BSES at NAVBAR*/
+
+img.logo {
     width: 50px;
     height: auto;
     margin-top: 10px;
 }
-label.logo{ /*LOGO BSES at Navbar*/
+
+label.logo {
     color: white;
-    font-size: 40px;
-    line-height: 50px;
-    padding: 0 50px;
-    font-weight: bold;  
-    cursor: pointer; 
+    font-size: 1.8rem;
+    line-height: 82px;
+    padding: 0 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
-nav ul { /*Text position on the UL Navbar*/
+
+nav ul {
     float: right;
-    margin-right: 20px;
+    text-align: center;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+    line-height: 82px;
+    margin: 0 10px;
     font-family: 'Times New Roman', Times, serif;
-    
 }
-nav ul li a{
+
+nav ul li a {
     color: white;
-    font-size: 18px;
-    padding: 9px 13px;
+    font-size: 1rem;
+    padding: 10px 15px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-a.active,a:hover{
-    background: none;
-    transition: .5s;
+
+.below-nav-container {
+    position: relative;
 }
-.below-nav{ /*submarine slide images*/
-    display: block;
-    margin-top: 0px;
+
+.below-nav {
     width: 100%;
-    height: 600px;
-    
+    height: auto;
 }
-.next-arrow{
+
+.next-arrow {
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
-    background-color: none;
-    
-}
-.below-nav-container {
-    position: relative;
-    margin-bottom: 20px; /* Adjust as needed */
 }
 
-section {
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 600px; /* Set a maximum width for the section */
-    margin: 20px auto; /* Center the section with top and bottom margin */
-    padding: 20px;
-    background-color: #f8f8f8; /* Light gray background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light box shadow for depth */
-}
 .sections-container {
     display: flex;
-    background-color: white;
-    border-radius: 2px;
-    
-}
-section {
-    
-    flex: 1; /* Distribute available space equally among sections */
-    padding: 20px; /* Add some spacing to sections */
-    box-sizing: border-box; /* Include padding in the section's total width */
+    flex-wrap: wrap;
     background-color: white;
 }
 
-/* Additional styling for sections */
+section {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 10px;
+}
+
 section h2 {
-    color: red; /* Set text color */
+    color: red;
+    text-align: center;
 }
 
 section p {
     text-align: center;
-    color: #666; /* Set text color */
+    color: #666;
 }
 
 article {
-    margin-top: 15px; /* Add spacing between articles */
+    margin-top: 15px;
 }
 
 article h3 {
-    color: #0066cc; /* Set text color for article titles */
+    color: #0066cc;
     text-align: center;
 }
 
 article p {
-    color: #999; /* Set text color for article content */
+    color: #999;
 }
 
+h2 {
+    color: blue;
+    text-align: center;
+}
 
-h2{
-    color: blue; /* Set text color */
+footer {
     text-align: center;
+    padding: 10px;
 }
-footer{
-    text-align: center;
-}
-.cursor{
+
+.cursor {
     padding: auto;
     background-color: #f0f0f0;
-    cursor: pointer; /* Set the cursor to a pointing hand (finger) */
-}
-ul:hover {
-    background-color: none; /* Change the background color on hover */
-}
-
-ul li a:hover {
-    color: cyan; /* Change the text color on link hover */
-}
-ul li a {
-    position: relative;
-    text-decoration: none;
-    color: black; /* Set the default text color */
-    
+    cursor: pointer;
 }
 
 ul li a:hover {
     color: whitesmoke;
 }
 
-ul li a::before { /*square hover */
-    content: ''; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: white; 
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
+ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     border-radius: 5px;
 }
 
@@ -165,22 +142,18 @@ ul li a:hover::before {
     opacity: 0.5;
 }
 
-.inside-welcome{ /*image of the welcome*/
+.inside-welcome {
     width: 100%;
     display: block;
 }
-.inside-featured{ /*image of the featured*/
-    width: 50%;
-    display: block;
-    margin-left: 100px;
 
-}
-.inside-latest{ /*image of the latest news*/
-    width: 50%;
+.inside-featured,
+.inside-latest {
+    width: 100%;
     display: block;
-    margin-left: 100px;
-    
+    margin-left: 0;
 }
+
 /* Styles specifically for the new form section */
 #contact-form {
     max-width: 600px;
@@ -200,7 +173,8 @@ ul li a:hover::before {
     font-weight: bold;
 }
 
-#contact-form input, #contact-form textarea {
+#contact-form input,
+#contact-form textarea {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -223,4 +197,42 @@ ul li a:hover::before {
     background-color: #45a049;
 }
 
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    label.logo {
+        padding: 0 5px;
+    }
 
+    nav ul {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 40px;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 5px 0;
+    }
+
+    .below-nav-container {
+        margin-bottom: 10px;
+    }
+
+    .next-arrow {
+        right: 5px;
+    }
+
+    .sections-container {
+        flex-direction: column;
+    }
+
+    section {
+        margin: 10px 0;
+    }
+}
