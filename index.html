@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>BHIC Submarine Engineering Services Sdn Bhd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="BSES Logo.png" type="image/x-icon">
+    <style>
+        /* Add your existing styles here */
+    </style>
+</head>
+<body>
+    <div class="cursor">
+        <nav>
+            <a href="about.html" target="_blank" class="logo">
+                <label class="logo"><img src="BSES Logo.png" alt="BSES Logo"></label>
+            </a>
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#contact-form">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="below-nav-container">
+        <a href="javascript:void(0);" class="next-arrow" onclick="changeImage()">
+            <img src="arrow.jpeg" alt="Next Page Arrow">
+        </a>
+        <img id="mainImage" src="Submarine.jpg" alt="picture below nav" class="below-nav">
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="sections-container">
+        <section>
+            <h2>Welcome to Our Website</h2>
+            <p>Explore our services and learn more about what we offer.</p>
+            <img src="welcome.jpg" alt="picture inside welcome" class="inside-welcome">
+        </section>
+
+        <section>
+            <h2>Featured Services</h2>
+            <p>Discover our top-notch services that cater to your needs.</p>
+            <img src="Featured service.jpg" alt="inside featured" class="inside-featured">
+        </section>
+
+        <section>
+            <h2>Latest News</h2>
+            <article>
+                <h3>Article Title</h3>
+                <p>Article content goes here.</p>
+                <img src="latest news.jpeg" alt="inside latest" class="inside-latest">
+            </article>
+        </section>
+    </div>
+
+    <section id="contact-form">
+        <h2>Contact Us</h2>
+        <form action="process_form.php" method="post">
+            <!-- Add your form fields here -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 BSES Company | <a href="privacy.html">Privacy Policy</a></p>
+        <p>Contact us at: henorygerld@gmail.com</p>
+    </footer>
+</body>
+</html>
+
