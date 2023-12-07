@@ -1,140 +1,163 @@
-* {
+*{
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
+body{
+    font-family: montserrat;
 
-body {
-    font-family: 'Montserrat', sans-serif;
 }
-
-nav {
+nav{
     background: darkcyan;
     height: 82px;
     width: 100%;
+    
 }
-
-img.logo {
+img{ /*logo BSES at NAVBAR*/
     width: 50px;
     height: auto;
     margin-top: 10px;
 }
-
-label.logo {
+label.logo{ /*LOGO BSES at Navbar*/
     color: white;
-    font-size: 1.8rem;
-    line-height: 82px;
-    padding: 0 10px;
-    font-weight: bold;
-    cursor: pointer;
+    font-size: 40px;
+    line-height: 50px;
+    padding: 0 50px;
+    font-weight: bold;  
+    cursor: pointer; 
 }
-
-nav ul {
+nav ul { /*Text position on the UL Navbar*/
     float: right;
-    text-align: center;
+    margin-right: 20px;
 }
-
-nav ul li {
+nav ul li{
     display: inline-block;
-    line-height: 82px;
-    margin: 0 10px;
+    line-height: 80px;
+    margin: 0 5px;
     font-family: 'Times New Roman', Times, serif;
+    
 }
-
-nav ul li a {
+nav ul li a{
     color: white;
-    font-size: 1rem;
-    padding: 10px 15px;
+    font-size: 18px;
+    padding: 9px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-
-.below-nav-container {
-    position: relative;
+a.active,a:hover{
+    background: none;
+    transition: .5s;
 }
-
-.below-nav {
+.below-nav{ /*submarine slide images*/
+    display: block;
+    margin-top: 0px;
     width: 100%;
-    height: auto;
+    height: 600px;
+    
 }
-
-.next-arrow {
+.next-arrow{
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
+    background-color: none;
+    
 }
-
-.sections-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
+.below-nav-container {
+    position: relative;
+    margin-bottom: 20px; /* Adjust as needed */
 }
 
 section {
-    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 600px; /* Set a maximum width for the section */
+    margin: 20px auto; /* Center the section with top and bottom margin */
     padding: 20px;
-    box-sizing: border-box;
+    background-color: #f8f8f8; /* Light gray background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light box shadow for depth */
+}
+.sections-container {
+    display: flex;
     background-color: white;
-    margin: 10px;
+    border-radius: 2px;
+    
+}
+section {
+    
+    flex: 1; /* Distribute available space equally among sections */
+    padding: 20px; /* Add some spacing to sections */
+    box-sizing: border-box; /* Include padding in the section's total width */
+    background-color: white;
 }
 
+/* Additional styling for sections */
 section h2 {
-    color: red;
-    text-align: center;
+    color: red; /* Set text color */
 }
 
 section p {
     text-align: center;
-    color: #666;
+    color: #666; /* Set text color */
 }
 
 article {
-    margin-top: 15px;
+    margin-top: 15px; /* Add spacing between articles */
 }
 
 article h3 {
-    color: #0066cc;
+    color: #0066cc; /* Set text color for article titles */
     text-align: center;
 }
 
 article p {
-    color: #999;
+    color: #999; /* Set text color for article content */
 }
 
-h2 {
-    color: blue;
+
+h2{
+    color: blue; /* Set text color */
     text-align: center;
 }
-
-footer {
+footer{
     text-align: center;
-    padding: 10px;
 }
-
-.cursor {
+.cursor{
     padding: auto;
     background-color: #f0f0f0;
-    cursor: pointer;
+    cursor: pointer; /* Set the cursor to a pointing hand (finger) */
+}
+ul:hover {
+    background-color: none; /* Change the background color on hover */
+}
+
+ul li a:hover {
+    color: cyan; /* Change the text color on link hover */
+}
+ul li a {
+    position: relative;
+    text-decoration: none;
+    color: black; /* Set the default text color */
+    
 }
 
 ul li a:hover {
     color: whitesmoke;
 }
 
-ul li a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+ul li a::before { /*square hover */
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: white; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
     border-radius: 5px;
 }
 
@@ -142,18 +165,22 @@ ul li a:hover::before {
     opacity: 0.5;
 }
 
-.inside-welcome {
+.inside-welcome{ /*image of the welcome*/
     width: 100%;
     display: block;
 }
-
-.inside-featured,
-.inside-latest {
-    width: 100%;
+.inside-featured{ /*image of the featured*/
+    width: 50%;
     display: block;
-    margin-left: 0;
-}
+    margin-left: 100px;
 
+}
+.inside-latest{ /*image of the latest news*/
+    width: 50%;
+    display: block;
+    margin-left: 100px;
+    
+}
 /* Styles specifically for the new form section */
 #contact-form {
     max-width: 600px;
@@ -173,8 +200,7 @@ ul li a:hover::before {
     font-weight: bold;
 }
 
-#contact-form input,
-#contact-form textarea {
+#contact-form input, #contact-form textarea {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -197,42 +223,5 @@ ul li a:hover::before {
     background-color: #45a049;
 }
 
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    label.logo {
-        padding: 0 5px;
-    }
 
-    nav ul {
-        float: none;
-        text-align: center;
-        margin: 10px 0;
-    }
 
-    nav ul li {
-        display: block;
-        line-height: 40px;
-        margin: 5px 0;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 5px 0;
-    }
-
-    .below-nav-container {
-        margin-bottom: 10px;
-    }
-
-    .next-arrow {
-        right: 5px;
-    }
-
-    .sections-container {
-        flex-direction: column;
-    }
-
-    section {
-        margin: 10px 0;
-    }
-}
